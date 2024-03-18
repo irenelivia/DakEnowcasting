@@ -245,9 +245,7 @@ def create_timeseries_dataset_from_array_sampler(time_indices):
                 lambda i, positions: positions[i],
                 num_parallel_calls=tf.data.AUTOTUNE,
             )
-            target_ds = sequences_from_indices(
-                targets, indices, start_index, end_index
-            )
+            target_ds = sequences_from_indices(targets, indices, start_index, end_index)
             dataset = tf.data.Dataset.zip((dataset, target_ds))
         dataset = dataset.prefetch(tf.data.AUTOTUNE)
         if batch_size is not None:
@@ -259,7 +257,7 @@ def create_timeseries_dataset_from_array_sampler(time_indices):
             if shuffle:
                 dataset = dataset.shuffle(buffer_size=1024, seed=seed)
         return dataset
-    
+
     return timeseries_dataset_from_array
 
 
