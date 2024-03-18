@@ -1,1 +1,2 @@
-The folder *coldpooling* contains the python programs used to process automatic weather station output (simulated or not) for keras/tensorflow, to detect cold pools in the data, and to train several kinds of neural networks, including one-shot and autoregressive LSTM to detect CPs in time series.
+The folder **coldpooling** contains the python programs used to process automatic weather station output (simulated or not) for keras/tensorflow, to detect cold pools (CPs) in the data, and to train several kinds of neural networks, including one-shot and autoregressive LSTMs, to predict CPs in Dakar from time series.
+Jupyter notebooks are included, which were used to train and test the LSTM models.
